@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: #f9fafc;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  .tip {
+    background: #fff3cd;
+    color: #856404;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border-left: 5px solid #ffc107;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+  }
+  input[type="search"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  #allSnippets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .snippet-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-weight: 600;
+    color: #ff9800;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    width: 250px; /* or whatever fixed width you want */
+    display: flex;
+    flex-direction: column;
+  
+    /* Added for better text wrap: */
+    white-space: normal;   /* Allow text to wrap on multiple lines */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: anywhere; /* Break anywhere if needed */
+  }
+  
+  .snippet-card:hover {
+    background-color: #fff3cd;
+  }
+
+  .result-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .copy-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .copy-btn:hover {
+    background: #ccc;
+  }
+  mark {
+    background-color: #fff176;
+  }
+  pre {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  .result {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    padding: 20px;
+  
+    height: 300px;      /* limit height */
+    overflow-y: auto;       /* enable vertical scroll */
+    overflow-x: hidden;     /* hide horizontal scroll */
+    white-space: normal;    /* allow normal wrapping */
+  }
+  
+  
+  .result-content {
+    white-space: normal; /* allow normal wrapping */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* For code blocks inside result-content */
+  .result-content pre {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;       /* horizontal scroll for code */
+    white-space: pre;       /* preserve whitespace in code */
+  }
+  
+  /* New styles for expand/collapse */
+  .result-content .preview {
+    white-space: pre-wrap;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .result-content .full {
+    display: none;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+  }
+  .expand-btn {
+    background: none;
+    border: none;
+    color: #ff9800;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0;
+  }
+  .expand-btn:hover {
+    text-decoration: underline;
+  }
